@@ -3,7 +3,7 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>PMR WIRA</title>
+  <title>PAMEGRO</title>
   <link rel="stylesheet" href="style.css">
   <!-- AOS CSS -->
   <link href="https://cdn.jsdelivr.net/npm/aos@2.3.4/dist/aos.css" rel="stylesheet">
@@ -59,7 +59,7 @@
   <!-- Hero Section -->
   <section class="hero"id="beranda">
     <div class="hero-overlay">
-      <h1>PMR WIRA</h1>
+      <h1>PMR WIRA SMAN 1 GROGOL</h1>
       <p>Muda, Peduli, dan Siap Mengabdi</p>
       <div class="hero-buttons">
         <a href="#" class="btn">Profil</a>
@@ -98,7 +98,7 @@
   <!-- Team Section -->
   <section class="struktur" id="tim">
     <h1>STRUKTUR ORGANISASI 2024/2025</h1>
-    <h2>PALANG MERAH REMAJA</h2>
+    <h2>PMR WIRA SMAN 1 GROGOL</h2>
     <div class="row">
       <div class="member">
         <img src="img/team/ketua.jpg" alt="Najwa Sabrinna S.">
@@ -171,6 +171,10 @@
 
   window.addEventListener('scroll', toggleBackToTop);
   window.addEventListener('load', toggleBackToTop);
+  document.querySelector('.back-to-top').addEventListener('click', function(e) {
+    e.preventDefault();
+    document.getElementById('beranda').scrollIntoView({ behavior: 'smooth' });
+  });
 </script>
 </body>
 </html>
