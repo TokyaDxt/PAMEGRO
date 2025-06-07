@@ -31,12 +31,19 @@ html, body {
   font-size: 14px;
   padding: 8px 0;
 }
-
 .top-bar a,
 .top-bar a:visited,
 .top-bar a span {
-  color: #fff;
+  color: #fff !important;
   text-decoration: none;
+}
+
+.top-bar .sosmed,
+.top-bar a[href^="mailto:"] {
+  display: inline-flex;
+  align-items: center;
+  gap: 6px;
+  vertical-align: middle;
 }
 .top-bar .container {
   max-width: none;
