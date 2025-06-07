@@ -388,54 +388,40 @@ body {
 .emoji1 { bottom: 40px; right: 30px; width: 40px; }
 
 /* Responsif HP */
-@media (max-width: 600px) {
-  .struktur .row {
+@media (max-width: 768px) {
+  .container {
     flex-direction: column;
-    align-items: center;
+    padding: 10px;
+    max-width: 100%;
+    align-items: flex-start;
   }
 
-  .struktur .member {
-    width: 80%;
+  nav {
+    flex-direction: column;
+    align-items: flex-start;
   }
 
-  .dekor {
-    display: none;
-  }
-}
-@media (max-width: 600px) {
-  .struktur h1 {
-    font-size: 22px;
+  .nav-links {
+    flex-direction: column;
+    gap: 10px;
+    width: 100%;
   }
 
-  .struktur h2 {
-    font-size: 18px;
+  .hero {
+    height: 350px;
   }
 
-  .struktur .member {
-    width: 140px;
-    padding: 12px;
+  .hero h1 {
+    font-size: 28px;
   }
 
-  .struktur .member img {
-    width: 80px;
-    height: 80px;
+  .hero p {
+    font-size: 16px;
   }
 
-  .struktur .role {
+  .btn {
+    display: inline-block;
+    margin: 10px 5px;
     font-size: 14px;
   }
-
-  .struktur .name {
-    font-size: 13px;
-  }
-
-  .dekor {
-    width: 35px;
-    opacity: 0.5;
-  }
-
-  .stiker1 { top: 10px; left: 8px; }
-  .stiker2 { top: 50px; right: 10px; }
-  .bintang1, .emoji1 { bottom: 10px; width: 30px; }
 }
-
