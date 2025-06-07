@@ -399,6 +399,43 @@ body {
   }
 
   .dekor {
-    display: none; /* dekor sembunyi di HP biar rapi */
+    display: none;
   }
 }
+@media (max-width: 600px) {
+  .struktur h1 {
+    font-size: 22px;
+  }
+
+  .struktur h2 {
+    font-size: 18px;
+  }
+
+  .struktur .member {
+    width: 140px;
+    padding: 12px;
+  }
+
+  .struktur .member img {
+    width: 80px;
+    height: 80px;
+  }
+
+  .struktur .role {
+    font-size: 14px;
+  }
+
+  .struktur .name {
+    font-size: 13px;
+  }
+
+  .dekor {
+    width: 35px;
+    opacity: 0.5;
+  }
+
+  .stiker1 { top: 10px; left: 8px; }
+  .stiker2 { top: 50px; right: 10px; }
+  .bintang1, .emoji1 { bottom: 10px; width: 30px; }
+}
+
