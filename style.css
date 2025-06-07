@@ -32,8 +32,20 @@ html, body {
   padding: 8px 0;
 }
 .top-bar a,
-.top-bar a:visited,
-.top-bar .sosmed,
+.top-bar a:visited {
+  text-decoration: none !important;
+}
+.top-bar .sosmed a {
+  display: flex;
+  align-items: center;
+  gap: 6px;
+}
+.top-bar .sosmed {
+  display: flex;
+  align-items: center;
+  gap: 20px; 
+  justify-content: flex-start;
+}
 .top-bar a[href^="mailto:"] {
   display: inline-flex;
   align-items: center;
@@ -185,7 +197,11 @@ body {
   color: orange;
   margin-top: 0;
 }
-
+.struktur img {
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+}
 .row {
   display: flex;
   flex-wrap: wrap;
@@ -460,4 +476,94 @@ body {
     height: auto;
     display: block;
   }
+}
+/* Hamburger menu button */
+.menu-toggle {
+  display: none;
+  flex-direction: column;
+  justify-content: center;
+  gap: 5px;
+  width: 32px;
+  height: 32px;
+  background: none;
+  border: none;
+  cursor: pointer;
+  margin-left: auto;
+  z-index: 1101;
+}
+.menu-toggle span {
+  display: block;
+  height: 4px;
+  width: 100%;
+  background: #fff;
+  border-radius: 2px;
+  transition: 0.3s;
+}
+
+/* Overlay menu */
+.overlay-menu {
+  position: fixed;
+  top: 0;
+  right: -100vw;
+  width: 80vw;
+  max-width: 320px;
+  height: 100vh;
+  background: #b71c1c;
+  color: #fff;
+  z-index: 1100;
+  transition: right 0.4s cubic-bezier(.77,0,.18,1);
+  box-shadow: -2px 0 16px rgba(0,0,0,0.2);
+  padding-top: 60px;
+  display: flex;
+  flex-direction: column;
+}
+.overlay-menu.active {
+  right: 0;
+}
+.overlay-menu ul {
+  list-style: none;
+  padding: 0 24px;
+}
+.overlay-menu ul li {
+  margin: 24px 0;
+}
+.overlay-menu ul li a {
+  color: #fff;
+  font-size: 1.2em;
+  text-decoration: none;
+  transition: color 0.2s;
+}
+.overlay-menu ul li a:hover {
+  color: #ffc107;
+}
+
+/* Hide nav-links on mobile, show hamburger */
+@media (max-width: 900px) {
+  .nav-links {
+    display: none !important;
+  }
+  .menu-toggle {
+    display: flex;
+  }
+}
+.back-to-top {
+  position: fixed;
+  right: 24px;
+  bottom: 24px;
+  width: 48px;
+  height: 48px;
+  background: #b71c1c;
+  color: #fff;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 2em;
+  text-decoration: none;
+  box-shadow: 0 2px 8px rgba(0,0,0,0.15);
+  z-index: 1200;
+  transition: background 0.2s;
+}
+.back-to-top:hover {
+  background: #c62828;
 }

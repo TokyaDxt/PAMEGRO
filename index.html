@@ -11,36 +11,53 @@
 <body>
 
   <!-- Top Bar -->
-  <div class="top-bar">
-    <div class="container">
+<div class="top-bar">
+  <div class="container">
+    <div class="sosmed">
       <a href="https://instagram.com/pmrwirasmagro" target="_blank">
         <img src="img/Elemen/iglogo.png" alt="Instagram" style="height:20px;vertical-align:middle;">
         <span>@pmrwirasmagro</span>
       </a>
-      <a href="mailto:pmrwira@example.com" style="display: inline-flex; align-items: center; gap: 6px;">
+      <a href="mailto:pmrwira@example.com">
         <img src="img/Elemen/emaillogo.png" alt="Email" style="height:20px;vertical-align:middle;">
         <span>pmrwira@example.com</span>
       </a>
     </div>
   </div>
+</div>
 
   <!-- Navigation -->
-  <nav>
-    <div class="logo">
-      <img src="img/logo-pmr.png" alt="Logo PMR WIRA">
-    </div>
-    <ul class="nav-links">
-      <li><a href="#">Beranda</a></li>
-      <li><a href="#">Tentang Kami</a></li>
+<nav>
+  <div class="logo">
+    <img src="img/logo-pmr.png" alt="Logo PMR WIRA">
+  </div>
+  <button class="menu-toggle" id="menuToggle" aria-label="Menu">
+    <span></span>
+    <span></span>
+    <span></span>
+  </button>
+  <ul class="nav-links">
+    <li><a href="#">Beranda</a></li>
+    <li><a href="#">Tentang Kami</a></li>
+    <li><a href="#tim">Tim</a></li>
+    <li><a href="#">Kegiatan</a></li>
+    <li><a href="#">Galeri</a></li>
+    <li><a href="#">Kontak</a></li>
+  </ul>
+  <div class="overlay-menu" id="overlayMenu">
+    <ul>
+      <li><a href="#beranda">Beranda</a></li>
+      <li><a href="#tentang">Tentang Kami</a></li>
       <li><a href="#tim">Tim</a></li>
       <li><a href="#">Kegiatan</a></li>
       <li><a href="#">Galeri</a></li>
       <li><a href="#">Kontak</a></li>
     </ul>
-  </nav>
+  </div>
+</nav>
 
   <!-- Hero Section -->
-  <section class="hero">
+  <section class="hero"id="beranda">
     <div class="hero-overlay">
       <h1>PMR WIRA</h1>
       <p>Muda, Peduli, dan Siap Mengabdi</p>
@@ -52,7 +69,7 @@
   </section>
 
   <!-- Tentang Kami Section -->
-  <section class="top-barcontainer">
+  <section class="top-barcontainer" id="tentang">
     <div class="foto" data-aos="fade-right">
       <img src="img/Elemen/foto-kegiatan.jpg.png" alt="Foto Kegiatan PMR Wira">
     </div>
@@ -123,5 +140,37 @@
   <script>
     AOS.init();
   </script>
+<script>
+  const menuToggle = document.getElementById('menuToggle');
+  const overlayMenu = document.getElementById('overlayMenu');
+  menuToggle.addEventListener('click', function() {
+    overlayMenu.classList.toggle('active');
+  });
+  // Klik di luar menu untuk menutup
+  overlayMenu.addEventListener('click', function(e) {
+    if(e.target === overlayMenu) overlayMenu.classList.remove('active');
+  });
+  // Tutup overlay saat link diklik
+  document.querySelectorAll('#overlayMenu a').forEach(link => {
+    link.addEventListener('click', function() {
+      overlayMenu.classList.remove('active');
+    });
+  });
+</script>
+<a href="#beranda" class="back-to-top" aria-label="Kembali ke Beranda">&#8679;</a>
+<script>
+  const backToTop = document.querySelector('.back-to-top');
+
+  function toggleBackToTop() {
+    if (window.scrollY < 100) {
+      backToTop.style.display = 'none';
+    } else {
+      backToTop.style.display = 'flex';
+    }
+  }
+
+  window.addEventListener('scroll', toggleBackToTop);
+  window.addEventListener('load', toggleBackToTop);
+</script>
 </body>
 </html>
