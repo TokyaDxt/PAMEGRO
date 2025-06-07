@@ -33,17 +33,21 @@ html, body {
 }
 .top-bar a,
 .top-bar a:visited,
-.top-bar a span {
-  color: #fff !important;
-  text-decoration: none;
-}
-
 .top-bar .sosmed,
 .top-bar a[href^="mailto:"] {
   display: inline-flex;
   align-items: center;
   gap: 6px;
   vertical-align: middle;
+}
+
+.top-bar a span {
+  font-size: 14px;
+  line-height: 1;
+  color: #fff !important;
+  margin: 0;
+  padding: 0;
+  display: inline;
 }
 .top-bar .container {
   max-width: none;
