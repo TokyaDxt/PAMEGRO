@@ -291,7 +291,7 @@ body {
       justify-content: center;
       padding: 60px 20px;
       max-width: 1200px;
-      margin: auto;
+      margin: 0 auto 16px auto;
     }
 
     .foto, .konten {
@@ -339,7 +339,7 @@ body {
   display: flex;
   align-items: center;
   gap: 40px;
-  margin-bottom: 40px;
+  margin-bottom: 8px;
 }
 
 .top-barcontainer.reverse {
@@ -348,7 +348,7 @@ body {
 /* Struktur Organisasi PMR WIRA */
 .struktur {
   padding: 60px 20px;
-  background-color: #fdf6f0;
+  background-color: #fff;
   text-align: center;
   position: relative;
 }
@@ -570,3 +570,46 @@ body {
 html {
   scroll-behavior: smooth;
 }
+.top-barcontainer h5{
+  width: 100%;
+  font-size: 32px;
+  color: #b71c1c;
+  text-align: center;
+  margin-bottom: 24px;
+  margin-top: 0;
+  order: -1; 
+}
+/* Paragraps */
+
+.tabbed {
+  text-indent: 2em;
+}
+p {
+  margin-bottom: 12px; /* Atur sesuai kebutuhan */
+}
+ul {
+  padding-left: 35px; /* Jarak dari sisi kiri */
+  margin-bottom: 10px; /* Jarak antar daftar dan elemen lain */
+  line-height: 1.6;
+}
+li {
+  margin-bottom: 0px; /* Jarak antar poin */
+}
+
+ol {
+  color: rgb(0, 0, 0);
+  font-family: sans-serif;
+  margin-left: 20px;
+}
+
+ol li {
+  margin-bottom: 16px;
+}
+
+.sub-point {
+  display: inline-block;
+  margin-top: 4px;
+  margin-left: 20px;
+  color: #000000; /* Warna teks sub-poin */
+}
+
