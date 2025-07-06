@@ -10,6 +10,16 @@
 </head>
 <body>
 
+<!-- POPUP REKRUTMEN -->
+<div class="popup-overlay" id="popup">
+  <div class="popup-box">
+    <h2>NEWS!!! Rekrutmen PMR Dibuka!</h2>
+    <p>Yuk bergabung jadi bagian dari tim PMR WIRA SMAN 1 GROGOL! Cek info selengkapnya sekarang.</p>
+    <a href="daftar.html"><button>Daftar Sekarang</button></a><br><br>
+    <button onclick="closePopup()">Tutup</button>
+  </div>
+</div>
+
   <!-- Top Bar -->
 <div class="top-bar">
   <div class="container">
@@ -38,6 +48,7 @@
   </button>
   <ul class="nav-links">
     <li><a href="#beranda">Beranda</a></li>
+    <li><a href="daftar.html">Gabung</a></li>
     <li><a href="#tentang">Tentang Kami</a></li>
     <li><a href="#tim">Tim</a></li>
     <li><a href="#materi">Materi</a></li>
@@ -47,6 +58,7 @@
   <div class="overlay-menu" id="overlayMenu">
     <ul>
       <li><a href="#beranda">Beranda</a></li>
+      <li><a href="daftar.html">Gabung</a></li>
       <li><a href="#tentang">Tentang Kami</a></li>
       <li><a href="#tim">Tim</a></li>
       <li><a href="#materi">Materi</a></li>
@@ -345,6 +357,19 @@
     e.preventDefault();
     document.getElementById('beranda').scrollIntoView({ behavior: 'smooth' });
   });
+</script>
+<script>
+  const popup = document.getElementById("popup");
+
+  function closePopup() {
+    popup.classList.remove("show");
+  }
+
+  window.onload = () => {
+    setTimeout(() => {
+      popup.classList.add("show");
+    }, 2000); // Delay 2 detik
+  };
 </script>
 </body>
 </html>
